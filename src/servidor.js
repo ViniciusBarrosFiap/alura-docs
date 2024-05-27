@@ -12,6 +12,4 @@ const servidorHttp = http.createServer(app);
 app.use(express.static(publicRepository));
 servidorHttp.listen(port, ()=>console.log(`Servidor rodando na porta ${port}`));
 const io = new Server(servidorHttp);
-io.on("connection", ()=>{
-    console.log("Um cliente se conectou");
-});
+export default io;
